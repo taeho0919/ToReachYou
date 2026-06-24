@@ -26,14 +26,12 @@ public class BossJ : IState
     }
     private IEnumerator Pattern1()
     {
-        Debug.Log("Boss1 - RosePrison 시작");
         RosePrison();
         yield return new WaitForSeconds(3f);
         NextPattern();
     }
     private IEnumerator Pattern2()
     {  
-        Debug.Log("Boss1 - Pattern2 시작");
         RoseWhipV();
         yield return new WaitForSeconds(3f);
         NextPattern();
@@ -41,8 +39,6 @@ public class BossJ : IState
     }
     private IEnumerator Pattern3()
     {
-        
-        Debug.Log("Boss1 - Pattern3 시작");
         RoseWhip();
         yield return new WaitForSeconds(4f);
         NextPattern();
@@ -50,19 +46,25 @@ public class BossJ : IState
     }
     private IEnumerator Pattern4()
     {
-
-       
+        RoseArrow();
         yield return new WaitForSeconds(4f);
         NextPattern();
 
     }
+    private IEnumerator Pattern5()
+    {
+        All();
+        yield return new WaitForSeconds(4f);
+        NextPattern();
+
+    }
+
 
     public void NextPattern()
     {
         if (_bossBase == null) return;
 
         _patternIndex = (_patternIndex + 1) % _bossData.patternOrder.Length;
-        Debug.Log($"NextPattern 호출 - index: {_patternIndex}, pattern: {_bossData.patternOrder[_patternIndex]}");
         RunPattern(_bossData.patternOrder[_patternIndex]);
     }
 
@@ -82,6 +84,10 @@ public class BossJ : IState
                 break;
              case 4:
                 _bossBase.StartCoroutine(Pattern4());
+                break;
+
+            case 5:
+                _bossBase.StartCoroutine(Pattern5());
                 break;
         }
     }
@@ -111,5 +117,21 @@ public class BossJ : IState
         {
             rose.gameObject.SetActive(true);
         }
+    }
+
+    private void RoseArrow()
+    {
+        var needles = Object.FindObjectsByType<SpawnHNeedle>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var needle in needles)
+        {
+            needle.gameObject.SetActive(true);
+        }
+    }
+    private void All()
+    {
+        RosePrison();
+        RoseWhip();
+        RoseWhipV();
+        RoseArrow();
     }
 }
