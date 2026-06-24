@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using System.Linq;
+using UnityEngine;
 
 public class BossJ : IState
 {
@@ -54,7 +55,7 @@ public class BossJ : IState
     private IEnumerator Pattern5()
     {
         All();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitUntil(() => AllInactive());
         NextPattern();
 
     }
@@ -94,28 +95,31 @@ public class BossJ : IState
 
     private void RosePrison()
     {
-        var roses = _bossBase.GetComponentsInChildren<RosePrison>(true); // true = 비활성화된 것도 포함
+        var roses = _bossBase.GetComponentsInChildren<RosePrison>(true);
         foreach (var rose in roses)
         {
-            rose.gameObject.SetActive(true);
+            if (!rose.gameObject.activeSelf)
+                rose.gameObject.SetActive(true);
         }
-
     }
 
     private void RoseWhip()
     {
-        var roses = _bossBase.GetComponentsInChildren<RoseWhip>(true); // true = 비활성화된 것도 포함
+        var roses = _bossBase.GetComponentsInChildren<RoseWhip>(true);
         foreach (var rose in roses)
         {
-            rose.gameObject.SetActive(true);
+            if (!rose.gameObject.activeSelf)
+                rose.gameObject.SetActive(true);
         }
     }
+
     private void RoseWhipV()
     {
-        var roses = _bossBase.GetComponentsInChildren<BossWhipV>(true); // true = 비활성화된 것도 포함
+        var roses = _bossBase.GetComponentsInChildren<BossWhipV>(true);
         foreach (var rose in roses)
         {
-            rose.gameObject.SetActive(true);
+            if (!rose.gameObject.activeSelf)
+                rose.gameObject.SetActive(true);
         }
     }
 
@@ -124,14 +128,31 @@ public class BossJ : IState
         var needles = Object.FindObjectsByType<SpawnHNeedle>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (var needle in needles)
         {
-            needle.gameObject.SetActive(true);
+            if (!needle.gameObject.activeSelf)
+                needle.gameObject.SetActive(true);
         }
     }
     private void All()
     {
-        RosePrison();
         RoseWhip();
+        RosePrison();
         RoseWhipV();
         RoseArrow();
+    }
+    private bool AllInactive()
+    {
+        bool rosePrisonDone = _bossBase.GetComponentsInChildren<RosePrison>(true)
+            .All(r => !r.gameObject.activeSelf);
+
+        bool roseWhipDone = _bossBase.GetComponentsInChildren<RoseWhip>(true)
+            .All(r => !r.gameObject.activeSelf);
+
+        bool roseWhipVDone = _bossBase.GetComponentsInChildren<BossWhipV>(true)
+            .All(r => !r.gameObject.activeSelf);
+
+        bool roseArrowDone = Object.FindObjectsByType<SpawnHNeedle>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+            .All(n => !n.gameObject.activeSelf);
+
+        return rosePrisonDone && roseWhipDone && roseWhipVDone && roseArrowDone;
     }
 }
