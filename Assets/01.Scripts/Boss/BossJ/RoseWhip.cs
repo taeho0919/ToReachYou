@@ -52,5 +52,11 @@ public class RoseWhip : MonoBehaviour
             _ => _startPos
         };
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth.Instance.TakeDamage(1);
+        }
+    }
 }

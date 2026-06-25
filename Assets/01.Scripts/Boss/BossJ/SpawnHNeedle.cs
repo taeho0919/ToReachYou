@@ -6,6 +6,8 @@ using UnityEngine;
         [SerializeField] private float _spawnInterval = 0.5f;
         [SerializeField] private float _activeDuration = 5f; // 활성화 지속 시간
         [SerializeField] private int _number;
+        [SerializeField] private float _needleSpeed;
+    [SerializeField] private Transform _parent;
 
         private float _timer;
         private float _activeTimer;
@@ -39,14 +41,14 @@ using UnityEngine;
             Vector2 spawnPos = GetSpawnPosition();
             Vector2 dir = _number == 1 ? Vector2.right : Vector2.left;
 
-            GameObject needle = Instantiate(_needlePrefab, spawnPos, Quaternion.identity);
+            GameObject needle = Instantiate(_needlePrefab, spawnPos, Quaternion.identity,_parent.transform);
 
             if (dir.x > 0)
             {
                 needle.transform.Rotate(0, 180f, 0);
             }
 
-            needle.GetComponent<Rigidbody2D>().linearVelocity = dir * 10f;
+            needle.GetComponent<Rigidbody2D>().linearVelocity = dir * _needleSpeed;
 
             _spawnTop = !_spawnTop;
         }

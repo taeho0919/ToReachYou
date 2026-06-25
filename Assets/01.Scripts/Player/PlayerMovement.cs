@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         private void Dash()
         {
-        if (_isNoDash) return;
+              if (_isNoDash) return;
 
             _isDashing = true;
             _dashTimer = _dashDuration;
@@ -69,14 +69,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Boss")|| collision.gameObject.CompareTag("BossMain"))
         {
             _isNoDash = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Boss"))
+        if (collision.gameObject.CompareTag("Boss")||collision.gameObject.CompareTag("BossMain"))
         {
             _isNoDash = false;
         }

@@ -14,4 +14,11 @@ public class RoseArrow : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerHealth.Instance.TakeDamage(1);
+        }
+    }
 }

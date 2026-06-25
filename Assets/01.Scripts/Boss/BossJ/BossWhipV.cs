@@ -90,6 +90,13 @@ public class BossWhipV : MonoBehaviour
             _ => from
         };
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth.Instance.TakeDamage(1);
+        }
+    }
 }
 
 
