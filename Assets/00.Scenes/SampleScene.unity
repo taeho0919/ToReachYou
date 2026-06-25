@@ -638,7 +638,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 5ae8a5ec91f894c4bb1a4eb7bef9e21a, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 3f9215ea0144899419cfbc0957140d3f, type: 2}
 --- !u!4 &326885459
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,6 +1460,63 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 10}
   m_SizeDelta: {x: 1425.6, y: 100}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!1001 &513378168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870779361650941993, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941491828368872416, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
+      propertyPath: m_Name
+      value: BossjAttakc3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b65bb66528916bd4483b150e1ef7dcf8, type: 3}
 --- !u!1 &624913592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,6 +1554,63 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 3}
   m_SizeDelta: {x: 1525, y: 100}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!1001 &646121704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1235242647086518340, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155227979633005026, guid: ac83420075b18da4691fc8492b193596, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac83420075b18da4691fc8492b193596, type: 3}
 --- !u!1 &728741290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76043d0fb6daf441b4889a45260e82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossData: {fileID: 11400000, guid: 043ae2d4f41ba1c4489496873a48e330, type: 2}
+  _bossData: {fileID: 11400000, guid: 719023cbb7b61f04e817002b9c7d7ce6, type: 2}
 --- !u!60 &728741296
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5145,3 +5259,5 @@ SceneRoots:
   - {fileID: 1719233879}
   - {fileID: 332539545}
   - {fileID: 728741293}
+  - {fileID: 513378168}
+  - {fileID: 646121704}
