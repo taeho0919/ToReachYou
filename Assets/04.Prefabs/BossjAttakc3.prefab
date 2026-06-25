@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5941491828368872416
+--- !u!1 &2663089063490357698
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4870779361650941993}
-  - component: {fileID: -1707619163475139109}
-  - component: {fileID: 3449139889507633020}
-  - component: {fileID: -8379783455710109471}
-  - component: {fileID: 9187041008946591838}
+  - component: {fileID: 4075213080347220285}
+  - component: {fileID: 823145582743958077}
+  - component: {fileID: 1234287587431626733}
+  - component: {fileID: 520549114124330281}
+  - component: {fileID: 5921924987261715601}
   m_Layer: 0
   m_Name: BossjAttakc3
   m_TagString: BossW
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4870779361650941993
+--- !u!4 &4075213080347220285
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941491828368872416}
+  m_GameObject: {fileID: 2663089063490357698}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,26 +35,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1707619163475139109
+--- !u!114 &823145582743958077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941491828368872416}
+  m_GameObject: {fileID: 2663089063490357698}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e7511760c3471948ba012563e4c784c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _lifetime: 10
---- !u!212 &3449139889507633020
+--- !u!212 &1234287587431626733
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941491828368872416}
+  m_GameObject: {fileID: 2663089063490357698}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -103,14 +103,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-8379783455710109471
+--- !u!50 &520549114124330281
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941491828368872416}
+  m_GameObject: {fileID: 2663089063490357698}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -130,13 +130,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &9187041008946591838
+--- !u!70 &5921924987261715601
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941491828368872416}
+  m_GameObject: {fileID: 2663089063490357698}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
