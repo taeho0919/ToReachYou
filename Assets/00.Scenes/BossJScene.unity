@@ -4361,8 +4361,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC9C8\uD22C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4c01d3c00944c3d439b2f5bef6576d8b, type: 2}
-  m_sharedMaterial: {fileID: -2880358160227664571, guid: 4c01d3c00944c3d439b2f5bef6576d8b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5b9db6bab34422743b37d5a4053f0742, type: 2}
+  m_sharedMaterial: {fileID: -2163410638384481416, guid: 5b9db6bab34422743b37d5a4053f0742, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
