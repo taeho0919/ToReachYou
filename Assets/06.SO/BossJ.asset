@@ -13,6 +13,4 @@ MonoBehaviour:
   m_Name: BossJ
   m_EditorClassIdentifier: 
   bossType: 0
-  patternOrder: 05000000
-  bjd:
-    _bossjattack3: {fileID: 0}
+  patternOrder: 04000000010000000200000003000000040000000400000001000000040000000500000005000000
