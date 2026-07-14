@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c1d508097e2f714d8b0cfd686b99904
+guid: 0ab9f64c10fa29f4586e61605e3d0f11
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639178382591887351
+  platformSettingsDirtyTick: 639190349009774561
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: BossJealousy
+  - name: BossFW
     originalName: 
-    pivot: {x: 0.5, y: -0.30612245}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1024
-      height: 98
-    spriteID: 026f65e3df8f0454bb3a614180d6c65a
+      width: 128
+      height: 127
+    spriteID: bfa98ef04ee1a7945952fdec951916f0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -143,9 +143,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: -26}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: BossJealousy_0
+  - name: BossFW_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -153,11 +153,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 0
-      y: 0
-      width: 132
-      height: 128
-    spriteID: 4863e1d3ca212614381fbc77eb5a4b8d
+      x: 8
+      y: 112
+      width: 40
+      height: 19
+    spriteID: 10e98b8bc2ae17f4b85bbd8735a9bb82
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,7 +166,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_1
+  - name: BossFW_1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -174,11 +174,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 132
-      y: 0
-      width: 132
-      height: 128
-    spriteID: 974c9d5e08bad67418d03ee976e4b236
+      x: 80
+      y: 110
+      width: 45
+      height: 21
+    spriteID: b79db731b30ebd5409cd2664b286c614
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -187,7 +187,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_2
+  - name: BossFW_2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -195,11 +195,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 264
-      y: 0
-      width: 132
-      height: 128
-    spriteID: fd22c99279f14d0409222ed2e8ff8dbf
+      x: 4
+      y: 5
+      width: 52
+      height: 78
+    spriteID: b3023f4e8a774814788e84c03c9e669d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -208,7 +208,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_3
+  - name: BossFW_3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -216,95 +216,11 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 396
-      y: 0
-      width: 132
-      height: 128
-    spriteID: f81860c335609c44bb3c175c8b795af1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 528
-      y: 0
-      width: 132
-      height: 128
-    spriteID: 6fda64ab0f346454f82560c2459bea13
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 660
-      y: 0
-      width: 132
-      height: 128
-    spriteID: 76d68160ff99726408fe33d452d663aa
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 792
-      y: 0
-      width: 132
-      height: 128
-    spriteID: 373defad396aebd44bc7a9405f452897
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: BossJealousy_7
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 924
-      y: 0
-      width: 132
-      height: 128
-    spriteID: cf394bcdf19c45e47b5ce0d0ac5621b2
+      x: 56
+      y: 4
+      width: 76
+      height: 92
+    spriteID: 9d0b69d69dca36b4c9136c51d7b7f852
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -316,25 +232,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3034805519
+      value0: 2235173560
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: BossJealousy
+    name: BossFW
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: BossJealousy
+    - name: BossFW
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
-        width: 1024
-        height: 128
-      spriteId: 026f65e3df8f0454bb3a614180d6c65a
+        width: 128
+        height: 127
+      spriteId: bfa98ef04ee1a7945952fdec951916f0
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -386,8 +302,20 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
+  - name: iPhone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 1024, y: 128}
-  previousTextureSize: {x: 2048, y: 128}
+  canvasSize: {x: 128, y: 128}
+  previousTextureSize: {x: 256, y: 256}

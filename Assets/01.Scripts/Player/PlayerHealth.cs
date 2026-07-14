@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image _hpBarImage; // fillAmount 방식 HP바 Image
     [SerializeField] private float _hpBarDuration = 0.3f; // HP바 줄어드는 애니메이션 시간
 
+    public bool IsInvincible { get; private set; }
+
     private int _curhp;
     private SpriteRenderer _sr;
 
@@ -32,10 +34,18 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void SetInvincible(bool value)
+    {
+        IsInvincible = value;
+    }
+
     public void TakeDamage(int damage)
     {
+        if (IsInvincible)
+            return;
+
         _curhp -= damage;
-        _curhp = Mathf.Max(_curhp, 0); // 0 아래로 내려가지 않도록
+        _curhp = Mathf.Max(_curhp, 0);
 
         Flash();
         CameraShake();
@@ -64,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
         _flashImage.DOFade(0.5f, _flashDuration)
                    .OnComplete(() => _flashImage.DOFade(0f, _flashDuration));
     }
+
 
     private void CameraShake()
     {

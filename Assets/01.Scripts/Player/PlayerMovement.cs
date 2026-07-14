@@ -17,22 +17,24 @@ public class PlayerMovement : MonoBehaviour
     private float _dashTimer;
     private float _cooldownTimer;
     private bool _isNoDash;
-    private Collider2D _collider;
 
-    void Start()
+    private PlayerHealth _playerHealth;
+
+    private void Awake()
     {
-        _collider = GetComponent<Collider2D>();
+        _playerHealth = GetComponent<PlayerHealth>();
     }
 
-    void Update()
+    private void Update()
     {
         if (_isDashing)
         {
             _dashTimer -= Time.deltaTime;
+
             if (_dashTimer <= 0f)
             {
                 _isDashing = false;
-                _collider.enabled = true; // 무적 해제
+                _playerHealth.SetInvincible(false);
             }
         }
         else
@@ -50,37 +52,40 @@ public class PlayerMovement : MonoBehaviour
         ClampToCamera();
     }
 
-        private void Dash()
-        {
-              if (_isNoDash) return;
+    private void Dash()
+    {
+        if (_isNoDash) return;
 
-            _isDashing = true;
-            _dashTimer = _dashDuration;
-            _cooldownTimer = _dashCooldown;
+        _isDashing = true;
+        _dashTimer = _dashDuration;
+        _cooldownTimer = _dashCooldown;
 
-            _collider.enabled = false;
+        _playerHealth.SetInvincible(true);
 
-            _rb.linearVelocity = Vector2.zero;
-            if (_dir.x != 0 || _dir.y != 0)
-                _rb.AddForce(_dir * _dashForce, ForceMode2D.Impulse);
-            else
-                _rb.AddForce(Vector2.up * _dashForce, ForceMode2D.Impulse); // 입력 없으면 위쪽으로 대쉬
-        }
+        _rb.linearVelocity = Vector2.zero;
+
+        if (_dir != Vector2.zero)
+            _rb.AddForce(_dir * _dashForce, ForceMode2D.Impulse);
+        else
+            _rb.AddForce(Vector2.up * _dashForce, ForceMode2D.Impulse);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Boss")|| collision.gameObject.CompareTag("BossMain"))
+        if (collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossMain"))
         {
             _isNoDash = true;
         }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Boss")||collision.gameObject.CompareTag("BossMain"))
+        if (collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("BossMain"))
         {
             _isNoDash = false;
         }
     }
+
     private void ClampToCamera()
     {
         Camera cam = Camera.main;
@@ -90,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 pos = transform.position;
         pos.x = Mathf.Clamp(pos.x, min.x + _offset.x, max.x - _offset.x);
         pos.y = Mathf.Clamp(pos.y, min.y + _offset.y, max.y - _offset.y);
+
         transform.position = pos;
     }
 
