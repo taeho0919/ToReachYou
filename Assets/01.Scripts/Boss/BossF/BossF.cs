@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossF : IState
@@ -29,29 +30,36 @@ public class BossF : IState
     private IEnumerator Pattern1()
     {
         CloudUp();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         NextPattern();
     }
     private IEnumerator Pattern2()
     {
         CloudDown();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         NextPattern();
 
     }
     private IEnumerator Pattern3()
     {
-      
-        yield return new WaitForSeconds(4f);
+       Clouds(); 
+        yield return new WaitForSeconds(2f);
         NextPattern();
 
     }
     private IEnumerator Pattern4()
     {
-        
+        CloudWave();
         yield return new WaitForSeconds(4f);
         NextPattern();
 
+    }
+    
+    private IEnumerator Pattern5()
+    {
+        Blindness();
+        yield return new WaitForSeconds(4f);
+        NextPattern();
     }
 
     public void NextPattern()
@@ -79,6 +87,9 @@ public class BossF : IState
             case 4:
                 _bossBase.StartCoroutine(Pattern4());
                 break;
+            case 5:
+                _bossBase.StartCoroutine(Pattern5());
+                break;
         }
     }
 
@@ -105,6 +116,35 @@ public class BossF : IState
                 cloud.gameObject.SetActive(true);
             else
                 cloud.gameObject.SetActive(false);
+        }
+    }
+
+    private void Clouds()
+    {
+        var clouds=_bossBase.GetComponentsInChildren<Clouds>(true);
+        foreach (var cloud in clouds)
+        {
+            if (!cloud.gameObject.activeSelf)
+                cloud.gameObject.SetActive(true);
+        }
+    }
+
+    private void CloudWave()
+    {
+        var clouds = _bossBase.GetComponentsInChildren<CloudWave>(true);
+        foreach (var cloud in clouds)
+        {
+            if (!cloud.gameObject.activeSelf)
+                cloud.gameObject.SetActive(true);
+        }
+    }
+    private void Blindness()
+    {
+        var blind = _bossBase.GetComponentsInChildren<blindness>(true);
+        foreach (var blindness in blind)
+        {
+            if (!blindness.gameObject.activeSelf)
+                blindness.gameObject.SetActive(true);
         }
     }
 

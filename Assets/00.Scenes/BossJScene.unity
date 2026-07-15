@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 7396858757535938643}
-  _speed: 4
+  _speed: 6
   _offset: {x: 0.5, y: 0.5}
   _dashForce: 15
   _dashDuration: 0.15
