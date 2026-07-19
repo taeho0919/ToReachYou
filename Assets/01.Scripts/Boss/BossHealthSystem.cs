@@ -18,8 +18,12 @@ public class BossHealthSystem : MonoBehaviour
     [SerializeField] private Image _hpBarImage;
     [SerializeField] private float _hpBarDuration = 0.3f;
 
+    public static BossHealthSystem instance;
+
     private void Awake()
     {
+        instance = this;
+
         _curHp = hp;
 
         if (_hpBarImage != null)
@@ -52,7 +56,7 @@ public class BossHealthSystem : MonoBehaviour
                    .SetEase(Ease.OutCubic);
     }
 
-    private void CameraShake()
+    public void CameraShake()
     {
         Camera.main.DOShakePosition(_shakeDuration, _shakeStrength);
     }

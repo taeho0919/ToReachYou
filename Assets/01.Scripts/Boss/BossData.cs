@@ -3,7 +3,8 @@ using UnityEngine;
 public enum BossType
 {
     Bossj,
-    Bossf
+    Bossf,
+    Bossi
 }
 
 [CreateAssetMenu(fileName ="BossData",menuName ="bossD")]

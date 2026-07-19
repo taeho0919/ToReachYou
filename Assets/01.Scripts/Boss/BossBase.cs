@@ -18,6 +18,9 @@ public class BossBase : MonoBehaviour
             case BossType.Bossf:
                 _currentBoss=new BossF(this, _bossData);
                 break;
+            case BossType.Bossi:
+                _currentBoss = new BossI(this, _bossData);
+                break;
 
         }
 

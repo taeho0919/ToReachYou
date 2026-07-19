@@ -56,7 +56,15 @@ public class PlayerHealth : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    public void Heal(int heal)
+    {
+        if (_curhp >= hp) return;
 
+        _curhp += heal;
+        _curhp = Mathf.Min(_curhp, hp); // 최대 HP를 넘지 않도록
+
+        UpdateHpBar();
+    }
     private void UpdateHpBar()
     {
         if (_hpBarImage == null) return;
