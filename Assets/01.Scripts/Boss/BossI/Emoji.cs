@@ -23,18 +23,17 @@ public class Emoji : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((type == AttackType.good && collision.CompareTag("Player"))
-    || collision.CompareTag("PlayerS"))
-        { 
+        if (type == AttackType.good &&
+            (collision.CompareTag("Player") || collision.CompareTag("PlayerS")))
+        {
             GoodAttackType();
         }
-        else if ((type == AttackType.Bad && collision.CompareTag("Player"))
-    || collision.CompareTag("PlayerS"))
+        else if (type == AttackType.Bad &&
+                 (collision.CompareTag("Player") || collision.CompareTag("PlayerS")))
         {
             BadAttackType();
         }
     }
-
 
     private void GoodAttackType()
     {

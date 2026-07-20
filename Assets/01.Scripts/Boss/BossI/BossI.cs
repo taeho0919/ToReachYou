@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class BossI : IState
 {
@@ -40,13 +41,13 @@ public class BossI : IState
     private IEnumerator Pattern3()
     {
         Emoji();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         NextPattern();
 
     }
     private IEnumerator Pattern4()
     {
-        
+        _bossBase.StartCoroutine(Eyes());
         yield return new WaitForSeconds(4f);
         NextPattern();
 
@@ -54,7 +55,7 @@ public class BossI : IState
 
     private IEnumerator Pattern5()
     {
-        
+        TextArrow();
         yield return new WaitForSeconds(4f);
         NextPattern();
     }
@@ -118,6 +119,28 @@ public class BossI : IState
         {
             if (!emojiDrop.gameObject.activeSelf)
                 emojiDrop.gameObject.SetActive(true);
+        }
+    }
+
+    private IEnumerator Eyes()
+    {
+        BossIEffect.Instance.CloseEye();
+        yield return new WaitForSeconds(0.5f);
+        var eyes = _bossBase.GetComponentsInChildren<Eye>(true);
+        foreach (var eye in eyes)
+        {
+            if (!eye.gameObject.activeSelf)
+                eye.gameObject.SetActive(true);
+        }
+    }
+
+    private void TextArrow() {
+        var text = _bossBase.GetComponentsInChildren<TextArrowSpawn>(true);
+
+        foreach (var arrow in text)
+        {
+            if(!arrow.gameObject.activeSelf)
+                arrow.gameObject.SetActive(true);
         }
     }
 }

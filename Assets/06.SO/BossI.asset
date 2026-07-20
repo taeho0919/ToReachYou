@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossI
   m_EditorClassIdentifier: 
   bossType: 2
-  patternOrder: 01000000
+  patternOrder: 0100000002000000030000000400000005000000
